@@ -7,6 +7,8 @@
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -18,16 +20,38 @@
             <i class='bx bxs-cart'></i> 
         </div>
     </header>
-    <div class="slider-container">
-        <div class="slider">
-            <img src="../image/Grocery.png" alt="Image 1">
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../image/Grocery.png" class="d-block w-100" alt="..." height="400px" width="1px" >
+          </div>
+          <div class="carousel-item">
+            <img src="../image/g1.jpg" class="d-block w-100" alt="..." height="400px">
+          </div>
+          <div class="carousel-item">
+            <img src="../image/g2.jpg" class="d-block w-100" alt="..." height="400px">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search products...">
+        <button id="search-button">Search</button>
     </div>
     
-    <div class="search-bar">
-        <input type="text" placeholder="Search...">
-        <button><i class='bx bxs-cart'></i></button>
-    </div>
+    <div class="product-container">
     <div class="para">
         <h3>Shop by Categery:</h3>
     </div>
@@ -128,9 +152,10 @@
                                 </div>
                             </div>
     <div class="footer-icons">
-      <button> <i class='bx bxs-home'></i></button>
-      <button><i class='bx bxs-cart'></i></button>
-      <button> <i class='bx bxs-user'></i></button>
+     <a href="../home/index.html"><button class="home"> <i class='bx bxs-home'></i></button></a> 
+     <a href="../userShopping/index.html"></a> <button><i class='bx bxs-cart'></i></button></a> 
+     <a href="../userSetting/index.html">  <button> <i class='bx bxs-user'></i></button></a> 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

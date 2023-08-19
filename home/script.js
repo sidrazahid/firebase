@@ -1,13 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.querySelector(".slider");
-    let counter = 0;
-    const images = slider.querySelectorAll("img");
-    const imageWidth = images[0].clientWidth;
 
-    function slideImages() {
-        counter = (counter + 1) % images.length;
-        slider.style.transform = `translateX(-${counter * imageWidth}px)`;
-    }
+   const searchButton = document.getElementById("search-button");
+   searchButton.addEventListener("click", function() {
+       searchProducts();
+   });
+   function searchProducts() {
+       const searchInput = document.getElementById("search-input");
+       const query = searchInput.value.toLowerCase();
 
-    setInterval(slideImages, 5000); // Change the time (in milliseconds) as needed
-});
+       const products = document.querySelectorAll(".product");
+       products.forEach(product => {
+           const description = product.querySelector(".description h2").textContent.toLowerCase();
+           if (description.includes(query)) {
+               product.style.display = "block";
+           } else {
+               product.style.display = "none";
+           }
+       });
+   }
+
