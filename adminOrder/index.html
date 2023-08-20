@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Order</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,14 +41,16 @@
 
         </div>
     </header>
-    <div class="user">
-        <div class="h-0.5 w-70 bg-indigo-500 rounded"></div>
+
+    <!-- <div class="user"> -->
+    <div class="h-0.5 w-70 bg-indigo-500 rounded"></div>
+    <div id="users">
         <section class="text-gray-400 body-font overflow-hidden">
             <div class="container px-5 py-20 mx-auto">
                 <div class="lg:w-4/5 mx-auto flex flex-wrap">
                     <img alt=".." class="lg:w-1/2 w-50 lg:h-auto h-50 object-cover object-center rounded"
                         src="../image/user.png">
-   </div>
+                </div>
                 <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                     <div class="relative mb-4">
                         <input type="text" id="full-name" name="full-name" placeholder="Update Full Name"
@@ -91,16 +93,16 @@
                     <button id="lbtn" type="button">Logout</button>
                 </div>
             </div>
+
+        </section>
     </div>
-    </section>
     <br>
     <div class="footer-icons">
-        <button class="home"> <i class='bx bxs-home'></i></button>
-        <button class="additem"> <i class='bx bxs-cart-add'></i></button>
-        <button class="user"> <i class='bx bxs-user' ></i></button>
-       
-      </div>
-      <br>
+        <a href="../adminProduct/index.html"><button class="home"> <i class='bx bxs-home bx-lg'></i></button></a> 
+        <a href="../adminAddItem/index.html"><button><i class='bx bxs-cart bx-lg'></i></button></a> 
+        <a href="../adminOrder/index.html">  <button> <i class='bx bxs-user bx-lg'></i></button></a> 
+       </div>
+    <br>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
